@@ -12,7 +12,9 @@ import eval_util
 
 #data_pattern = ['/Users/super/yt8m/train*.tfrecord']
 
-data_pattern = ['/Users/super/yt8m_videofeature/train*.tfrecord']
+#data_pattern = ['/Users/super/yt8m_videofeature/train*.tfrecord']
+
+data_pattern = ['I:\\yt8m_video\\train*.tfrecord']
 
 num_epochs = 5
 
@@ -229,7 +231,7 @@ def main():
                 total_step = total_step + 1
 
         except tf.errors.OutOfRangeError:
-            logging.info("%s: Done training -- epoch limit reached.", task_as_string(self.task))
+            logging.info("%s: Done training -- epoch limit reached.", task_as_string(task))
 
         coord.request_stop()
 
